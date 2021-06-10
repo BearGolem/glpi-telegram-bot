@@ -67,4 +67,4 @@ async def process_to_enter_password(
         return
     logging.info("User ID %d has logged in to glpi", user_id)
     await Form.logged_in.set()
-    await core.bot.send_message(user_id, "Отлично, теперь нас есть о чём поговорить!", reply_markup=select_command)
+    await core.bot.send_message(user_id, "Авторизация прошла успешно, теперь вы можете \033[4m/Создать заявку\033[0m и посмотреть \033[4m/Мои заявки\033[0m. Для просмотра всех команд введите \033[4m/Help\033[0m.", reply_markup=select_command)
